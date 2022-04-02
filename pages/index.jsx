@@ -1,7 +1,7 @@
 const Hola = () => {
   return (
     <div>
-      Holis
+      Holis 
     </div>
   );
 }
