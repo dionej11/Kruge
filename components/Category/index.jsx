@@ -1,7 +1,17 @@
-const Category = () => {
+import { Category } from './Category';
+import { UL__CATEGORIES } from './styles';
+
+export const Categories = () => {
+
+  const InfoTest = ["🍔", "🚕", "🛍", "🏠", "💃", "👩‍🎓", "🍧","👩‍🎓", "🍧"];
+
   return (
-    <h4>Category component</h4>
+      <UL__CATEGORIES>
+        {
+          InfoTest.map((item, index) => (
+            <Category key={`category-${index}`} icon={item} />
+          ))
+        }
+      </UL__CATEGORIES>
   );
 }
-
-export default Category;
