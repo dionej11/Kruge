@@ -1,4 +1,5 @@
 import { Transaction } from './Transaction';
+import { SECTION__HISTORY } from './styles';
 
 export const History = () => {
 
@@ -24,7 +25,8 @@ export const History = () => {
   ];
 
   return (
-    <>
+    <SECTION__HISTORY>
+      <h2>Historial: </h2>
       {
           Items.map((item, index) => (
             <Transaction 
@@ -36,6 +38,6 @@ export const History = () => {
             />
           ))
       }
-    </>
+    </SECTION__HISTORY>
   );
 }

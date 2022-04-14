@@ -1,11 +1,13 @@
 import { Category } from './Category';
-import { UL__CATEGORIES } from './styles';
+import { UL__CATEGORIES, SECTION__CATEGORIES } from './styles';
 
 export const Categories = () => {
 
   const InfoTest = ["🍔", "🚕", "🛍", "🏠", "💃", "👩‍🎓", "🍧","👩‍🎓", "🍧"];
 
   return (
+    <SECTION__CATEGORIES>
+      <h2>Categorías: </h2>
       <UL__CATEGORIES>
         {
           InfoTest.map((item, index) => (
@@ -13,5 +15,6 @@ export const Categories = () => {
           ))
         }
       </UL__CATEGORIES>
+    </SECTION__CATEGORIES>
   );
 }

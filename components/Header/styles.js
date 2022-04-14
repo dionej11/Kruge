@@ -2,7 +2,7 @@ import Styled from 'styled-components';
 import GlobalStyle from '@styles/globalStyles';
 
 export const HEADER = Styled.header`
-   background-color: ${GlobalStyle.principal};
+   background-color: ${GlobalStyle.COLORS.principal};
    border-radius: 0px 0px 30px 30px;
    height: 172px;
    position: relative;
@@ -39,6 +39,16 @@ export const DIV__ONE = Styled.div`
     z-index: 4;
     border-radius: 50%;
 `
+
+export const FIGURE__LOGO = Styled.figure`
+    position: absolute;
+    z-index: 5;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+`
+
 export const DIV__USER_INFO = Styled.div`
     display: flex;
     margin: 0px auto;
@@ -58,6 +68,8 @@ export const IMG_USER = Styled.img`
     margin: 10px;
 `
 export const H2__NAME = Styled.h2`
-    color: ${GlobalStyle.blanco};
+    color: ${GlobalStyle.COLORS.blanco};
     font-size: 19px;
+    font-weight: bold;
+    font-family: ${GlobalStyle.TYPOGRAPIC.roboto};
 `

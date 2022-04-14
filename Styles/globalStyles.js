@@ -7,4 +7,12 @@ const COLORS = {
   azul: "#A4D7FF"
 }
 
-export default COLORS;
+const TYPOGRAPIC = {
+  messiri: "El Messiri, sans-serif",
+  roboto: "Roboto, sans-serif"
+}
+
+export default {
+  COLORS,
+  TYPOGRAPIC
+};

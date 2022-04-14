@@ -4,13 +4,15 @@
   "description": "Aplicación para la gestión de las finanzas personales 💸",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "start": ""
+    "dev": "next -p 3001",
+    "build": "next build",
+    "start": "next start"
   },
   "keywords": [],
   "author": "Daniela Jurado <daniijuradob@gmail.com> ~ Juan Galvis <juangalvis.sh@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "js-cookie": "^3.0.1",
     "next": "^12.1.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
