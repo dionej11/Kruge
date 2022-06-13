@@ -1,3 +1,4 @@
+import TotalMoney from '@components/TotalMoney';
 import Cookie from 'js-cookie';
 import { useEffect } from 'react';
 
@@ -29,6 +30,7 @@ const Home = ({ user }) => {
     return (
         <>
             <h1>Home 🏡</h1>
+            <TotalMoney/>
         </>
     )
 }

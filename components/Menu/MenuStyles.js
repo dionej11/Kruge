@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import COLORS  from "../../Styles/globalStyles";
+import GlobalStyle from '@styles/globalStyles';
 
 export const MENU__MENU = styled.menu`
   align-items: center;
@@ -42,7 +42,7 @@ export const MENU__LI = styled.li`
 `;
 
 export const ADD_BUTTON = styled.button`
-  background: ${COLORS.principal};
+  background: ${GlobalStyle.COLORS.principal};
   border: none;
   border-radius: 2rem;
   color: #FFFFFF;
@@ -54,7 +54,7 @@ export const ADD_BUTTON = styled.button`
 `;
 
 export const INDICATOR__DIV = styled.div`
-  background: ${COLORS.principal};
+  background: ${GlobalStyle.COLORS.principal};
   width: 15px;
   height: 15px;
   border-radius: 1rem;

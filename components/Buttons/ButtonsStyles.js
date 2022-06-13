@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import COLORS  from "../../Styles/globalStyles";
+import GlobalStyle from '@styles/globalStyles';
 
 const BUTTON_TEMPLATE = styled.button`
   align-items: center;
-  background: ${props => COLORS[props.color] || props.color};
+  background: ${props => GlobalStyle.COLORS[props.color] || props.color};
   border: none;
   border-radius: 1.25rem;
   color: #ffffff;
@@ -27,7 +27,7 @@ export const SAVE__button = styled(BUTTON_TEMPLATE)`
 
 export const LOGIN__button = styled(BUTTON_TEMPLATE)`
   background: #192B3A;
-  color: ${COLORS.azul};
+  color: ${GlobalStyle.COLORS.azul};
   height: 2rem;
   width: 12.5rem;
 `;
