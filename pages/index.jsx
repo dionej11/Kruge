@@ -10,6 +10,7 @@ const Hola = () => {
    */
   return (
     <div>
+      <Header />
       Login 
     </div>
   );
