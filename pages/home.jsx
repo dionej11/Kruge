@@ -5,6 +5,7 @@ import { History } from '@components/History'
 
 import Cookie from 'js-cookie';
 import { useEffect } from 'react';
+import { MenuNav } from "@components/Menu";
 
 const Home = () => {
 
@@ -14,6 +15,7 @@ const Home = () => {
             <TotalMoney/>
             <Categories />
             <History />
+            <MenuNav />
         </>
     )
 }

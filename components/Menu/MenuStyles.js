@@ -3,9 +3,10 @@ import GlobalStyle from '@styles/globalStyles';
 
 export const MENU__MENU = styled.menu`
   align-items: center;
-  background: #ebc0ea;
+  background: #FFFFFF;
   border-radius: 30px 30px 0px 0px;
   bottom: 0;
+  box-shadow: 0px 1px 15px -3px rgba(161,159,161,1);
   display: flex;
   height: 5rem;
   left: 0;
@@ -13,6 +14,8 @@ export const MENU__MENU = styled.menu`
   padding: 0;
   position: fixed;
   right: 0;
+  -webkit-box-shadow: 0px 1px 15px -3px rgba(161,159,161,1);
+  -moz-box-shadow: 0px 1px 15px -3px rgba(161,159,161,1);
 `;
 
 export const MENU__UL = styled.ul`
