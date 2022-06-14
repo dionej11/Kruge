@@ -15,7 +15,7 @@ export const DIV__TRASACTION = Styled.div`
     h3 {
         font-family: ${GlobalStyle.TYPOGRAPIC.roboto};
         font-weight: 400;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     img {
@@ -26,9 +26,9 @@ export const DIV__TRASACTION = Styled.div`
 `
 
 export const P__VALUE__TRANSACTION = Styled.div`
-    color: ${({ type }) =>  type === "I" ? GlobalStyle.COLORS.principal : GlobalStyle.COLORS.secundario };
+    color: ${({ type }) =>  type === "ingreso" ? GlobalStyle.COLORS.principal : GlobalStyle.COLORS.secundario };
     font-weight: bold;
     font-family: ${GlobalStyle.TYPOGRAPIC.roboto};
     font-weight: bold;
-    font-size: 14px
+    font-size: 13px
 `

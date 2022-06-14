@@ -52,10 +52,10 @@ export const FIGURE__LOGO = Styled.figure`
 export const DIV__USER_INFO = Styled.div`
     display: flex;
     margin: 0px auto;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 80%;
-    width: 100%;
+    width: 18rem;
     left: 0;
     right: 0;
     position: absolute;
