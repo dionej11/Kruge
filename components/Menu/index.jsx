@@ -9,9 +9,9 @@ export const MenuNav = () => {
     <MENU__MENU>
       <MENU__UL>
 
-        <MENU__LI weight={router.asPath === "/menu" && "bold"}>
+        <MENU__LI weight={router.asPath === "/home" && "bold"}>
           <Link href="/home"><a>Inicio</a></Link>
-          <INDICATOR__DIV opacity={router.asPath === "/menu" ? 1 : 0}/>
+          <INDICATOR__DIV opacity={router.asPath === "/home" ? 1 : 0}/>
         </MENU__LI>
 
         <MENU__LI weight={router.asPath === "/data" && "bold"}>
