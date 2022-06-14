@@ -11,7 +11,7 @@ export const PROGRESS_BAR__section = Styled.section`
   margin: 2rem auto;
   width: 18rem;
   position: relative;
-  top: -6rem;
+  margin-top: -4rem;
   z-index: 100;
 `;
 
