@@ -10,6 +10,9 @@ export const PROGRESS_BAR__section = Styled.section`
   align-items: center;
   margin: 2rem auto;
   width: 18rem;
+  position: relative;
+  top: -6rem;
+  z-index: 100;
 `;
 
 export const SKILL__div = Styled.div`
