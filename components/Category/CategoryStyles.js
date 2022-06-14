@@ -11,9 +11,8 @@ export const DIV__CATEGORY = Styled.div`
     padding: 6px;
 `
 
-export const P__ICON = Styled.p`
+export const IMG__ICON = Styled.img`
     text-align: center;
-    font-size: 20px;
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    height: 40px;
 `

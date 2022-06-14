@@ -30,4 +30,5 @@ export const P__VALUE__TRANSACTION = Styled.div`
     font-weight: bold;
     font-family: ${GlobalStyle.TYPOGRAPIC.roboto};
     font-weight: bold;
+    font-size: 14px
 `
