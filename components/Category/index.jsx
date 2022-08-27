@@ -32,7 +32,7 @@ export const Categories = () => {
       <UL__CATEGORIES>
         {
           Categories &&
-          Categories.map((item, index) => (
+          Categories.reverse().map((item, index) => (
             <Category key={`category-${index}`} icon={item.icon} />
           ))
         }
