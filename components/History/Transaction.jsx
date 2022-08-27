@@ -5,7 +5,7 @@ export const Transaction = ({ icon, title, value, type }) => {
         <DIV__TRASACTION>
             <img src={icon} alt="Icono de la categoría"/>
             <h3>{title}</h3>
-            <P__VALUE__TRANSACTION type={type}>$ {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 1 }).format(value)}</P__VALUE__TRANSACTION>
+            <P__VALUE__TRANSACTION type={type}>$ {new Intl.NumberFormat('es-ES', { maximumSignificantDigits: 1 }).format(value)}</P__VALUE__TRANSACTION>
         </DIV__TRASACTION>
     )
 }

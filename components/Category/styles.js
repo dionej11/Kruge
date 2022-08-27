@@ -15,5 +15,5 @@ export const UL__CATEGORIES = Styled.ul`
     width: 84%;
     margin: 0 auto;
     display: flex;
-    overflow: hidden;
+    overflow: auto;
 `
