@@ -9,12 +9,12 @@ export const MenuNav = () => {
     <MENU__MENU>
       <MENU__UL>
 
-        <MENU__LI weight={router.asPath === "/home" && "bold"}>
+        <MENU__LI weight={router.asPath === "/home" && "500"}>
           <Link href="/home"><a>Inicio</a></Link>
           <INDICATOR__DIV opacity={router.asPath === "/home" ? 1 : 0}/>
         </MENU__LI>
 
-        <MENU__LI weight={router.asPath === "/data" && "bold"}>
+        <MENU__LI weight={router.asPath === "/data" && "500"}>
           <Link href="/data"><a>Datos</a></Link>
           <INDICATOR__DIV opacity={router.asPath === "/data" ? 1 : 0}/>
         </MENU__LI>
