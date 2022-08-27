@@ -60,7 +60,7 @@ const TotalMoney = () => {
         <OUTER__div>
           <INNER__div>
             <TOTAL_MONEY__h2>
-              {"$ "+new Intl.NumberFormat('es-ES', { maximumSignificantDigits: 1 }).format(totalMoney)}
+              {"$ "+new Intl.NumberFormat('es-ES').format(totalMoney)}
             </TOTAL_MONEY__h2>
           </INNER__div>
         </OUTER__div>
