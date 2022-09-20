@@ -28,7 +28,7 @@ const TotalMoney = () => {
     const data = await response.json();//objeto con la cantidad de gastos,ingresos y dinero actual del usuario
     console.log(data);
     setTotalMoney(data.result.total_money);
-    setvaluesTrans({out: data.result[0].count, in: data.result[1].count});
+    setvaluesTrans({out: data.result[0]?.count, in: data.result[1]?.count});
     }
     getUserTotalMoney();
   },[]);

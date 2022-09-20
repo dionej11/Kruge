@@ -2,17 +2,20 @@ import { Transaction } from './Transaction';
 import { SECTION__HISTORY } from './styles';
 
 import Cookie from 'js-cookie';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { Context } from '../../context';
+
 
 export const History = () => {
 
   const [History, setHistory] = useState();
+  const [filterTransactions, setFilterTransactions] = useContext(Context)
 
   useEffect(() => {
 
       const getHistory = async () => {
 
-          const response = await fetch('http://localhost:3000/history_transactions', {
+          const response = await fetch('http://localhost:3000/transactions', {
               headers: {
                   'Accept': 'application/json',
                   'Content-Type': 'application/json',
@@ -30,7 +33,17 @@ export const History = () => {
     <SECTION__HISTORY>
       <h2>Historial: </h2>
       {
-          History &&
+          filterTransactions?.length > 0 ?
+            filterTransactions.map((item, index) => (
+              <Transaction 
+                key={`history-transaction-${index}`}
+                icon={item.categoryObject[0].icon}
+                title={item.details}
+                value={item.value}
+                type={item.type}
+              />
+            ))
+          : History &&
           History.map((item, index) => (
             <Transaction 
               key={`history-transaction-${index}`}
