@@ -13,7 +13,9 @@ export const SECTION__CATEGORIES = Styled.section`
 
 export const UL__CATEGORIES = Styled.ul`
     width: 84%;
+    height: 80px;
     margin: 0 auto;
     display: flex;
     overflow: auto;
+    list-style: none;
 `
