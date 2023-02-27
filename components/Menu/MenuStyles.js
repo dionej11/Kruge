@@ -14,6 +14,7 @@ export const MENU__MENU = styled.menu`
   padding: 0;
   position: fixed;
   right: 0;
+  z-index: 99;
   -webkit-box-shadow: 0px 1px 15px -3px rgba(161,159,161,1);
   -moz-box-shadow: 0px 1px 15px -3px rgba(161,159,161,1);
 `;
@@ -58,8 +59,8 @@ export const ADD_BUTTON = styled.button`
 
 export const INDICATOR__DIV = styled.div`
   background: ${GlobalStyle.COLORS.principal};
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   border-radius: 1rem;
   opacity: ${props => props.opacity};
 `; 

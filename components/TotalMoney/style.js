@@ -1,104 +1,63 @@
 import Styled from 'styled-components';
 import GlobalStyles from '@styles/globalStyles';
 
-export const PROGRESS_BAR__section = Styled.section`
-  background: #FFFFFF;
-  border-radius: 10%;
-  height: 18rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem auto;
-  width: 18rem;
+export const CONTAINER_TOLTA_MONEY__section = Styled.section`
+  background: white;
   position: relative;
-  margin-top: -4rem;
-  z-index: 100;
-`;
-
-export const SKILL__div = Styled.div`
-  width: 15rem;
-  height: 15rem;
-  position: relative;
-`;
-
-export const OUTER__div = Styled.div`
-  width: 15rem;
-  height: 15rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7);
-`;
-
-export const INNER__div = Styled.div`
-  height: 12.5rem;
-  width: 12.5rem;
-  margin:0;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: -50px;
+  z-index: 99;
+  width: min-content;
+  height: 290px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 5px;
   box-sizing: border-box;
-  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2), inset -4px -4px 6px -1px rgba(255,255,255,0.7), -0.5px -0.5px 0px rgba(255,255,255,1), 0.5px 0.5px 0px rgba(0,0,0,0.15), 0px 12px 10px -10px rgba(0,0,0,0.05);
-`;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.1);
 
-export const TOTAL_MONEY__h2 = Styled.h2`
-  font-size: 2rem;
-  z-index: 1;
+  div:first-child {
+    z-index:20;
+    right: -1px;
+  }
+  div:last-child {
+    transform: scaleX(-1);
+    top: -280px;
+    /* transform: rotate(190deg); */
+  }
+`
+export const PROGRESS_BAR__div = Styled.div`
+  width: ${props => props.width};
+  aspect-ratio: 1;
+  position: relative;
+  display: inline-grid;
+  margin: 5px;
+  place-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-size: 1.8rem;
   background: ${GlobalStyles.COLORS.principal};
   background: -webkit-linear-gradient(to bottom, ${GlobalStyles.COLORS.principal}, ${GlobalStyles.COLORS.secundario});
   background: linear-gradient(to bottom, ${GlobalStyles.COLORS.principal}, ${GlobalStyles.COLORS.secundario});
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-`;
 
-const PROGRESS_BAR = Styled.svg`
-  position: absolute;
-  top:0;
-  left:0;
-  height: 240px;
-  width: 240px;
-`;
-
-export const PROGRESS_IN__svg = Styled(PROGRESS_BAR)`
-  transform: rotate(12deg);
-`;
-
-export const PROGRESS_OUT__svg = Styled(PROGRESS_BAR)`
-  transform: scaleY(-1);
-`;
-
-const PROGRESS_STROKE__circle = Styled.circle`
-  cx: 120;
-  cy: 120;
-  r: 110;
-  stroke-linecap: round;
-  fill: none;
-  stroke-width: 20px;
-  stroke-dasharray: 670;
-  stroke-dashoffset: 649;
-`;
-
-export const STROKE_IN___circle = Styled(PROGRESS_STROKE__circle)`
-  stroke: ${GlobalStyles.COLORS.principal};
-  animation: animUno 2s linear forwards;
-  
-  @keyframes animUno {
-    100% {
-      stroke-dashoffset: ${props => props.valueStroke};
-    }
+  &:before,
+  &:after {
+    content:"";
+    position: absolute;
+    border-radius: 50%;
   }
-`;
-
-export const STROKE_OUT___circle = Styled(PROGRESS_STROKE__circle)`
-  stroke: ${GlobalStyles.COLORS.secundario};
-  animation: animDos 2s linear forwards;
-  
-  @keyframes animDos {
-    100% {
-      stroke-dashoffset: ${props => props.valueStroke};
-    }
+  &:before {
+    inset:0;
+    background:
+      radial-gradient(farthest-side,${props => props.color} 98%,#0000) top/${props => props.border} ${props => props.border} no-repeat,
+      conic-gradient(${props => props.color} calc(${props => props.porcentage}*1%),#0000 0);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(99% - ${props => props.border}),#000 calc(100% - ${props => props.border}));
+    mask: radial-gradient(farthest-side,#0000 calc(99% - ${props => props.border}),#000 calc(100% - ${props => props.border}));
   }
-`;
+  &:after {
+    inset: calc(50% - ${props => props.border}/2);
+    background: ${props => props.color};
+    transform: rotate(calc(${props => props.porcentage}*3.6deg)) translateY(calc(50% - ${props => props.width}/2));
+  }
+`
