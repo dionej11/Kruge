@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { Categories } from "@components/Category";
 import { Header } from "@components/Header";
 import TotalMoney from '@components/TotalMoney';
@@ -9,6 +10,16 @@ import { MenuNav } from "@components/Menu";
 
 const Home = () => {
 
+    const Router = useRouter();
+    
+    useEffect(() => {
+        
+        if (!Cookie.get('JWT')) {
+            Router.push('/');
+        }
+        
+    }, []);
+
     return (
         <>
             <Header />
@@ -18,6 +29,7 @@ const Home = () => {
             <MenuNav />
         </>
     )
+
 }
 
 export default Home;

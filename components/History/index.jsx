@@ -29,9 +29,11 @@ export const History = () => {
       getHistory();
   }, []);
 
+  console.log(filterTransactions);
+
   return (
     <SECTION__HISTORY>
-      <h2>Historial: </h2>
+      <h2>Últimos movimientos: </h2>
       {
           filterTransactions?.length > 0 ?
             filterTransactions.map((item, index) => (
@@ -43,6 +45,8 @@ export const History = () => {
                 type={item.type}
               />
             ))
+          : filterTransactions?.length === 0 ?
+              <h2>Esta categoría no tiene transacciones 😜</h2>
           : History &&
           History.map((item, index) => (
             <Transaction 

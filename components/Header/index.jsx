@@ -22,6 +22,8 @@ export const Header = () => {
 
         /** mediante la librería "js-cookie" extraemos la cookie que guardamos con el token (lo de response.cookie() )  */
 
+        console.log('Bearer ' + Cookie.get('JWT'));
+
         const response = await fetch('http://localhost:3000/user', {
             headers: {
                 'Accept': 'application/json',

@@ -1,9 +1,15 @@
 import { useRouter } from 'next/router';
+import Cookies from 'js-cookie';
 import Link from 'next/link';
 import { MENU__MENU, MENU__UL, ADD_BUTTON, MENU__LI, INDICATOR__DIV } from "../Menu/MenuStyles";
 
 export const MenuNav = () => {
   const router = useRouter();
+
+  const SignOut = () => {
+    Cookies.remove('JWT');
+    router.push('/')
+  }
 
   return (
     <MENU__MENU>
@@ -31,7 +37,7 @@ export const MenuNav = () => {
         </MENU__LI>
 
         <MENU__LI>
-          <Link href="/"><a>Salir</a></Link>
+          <a onClick={SignOut}>Salir</a>
           <INDICATOR__DIV opacity="0" />
         </MENU__LI>
         
