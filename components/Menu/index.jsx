@@ -20,7 +20,9 @@ export const MenuNav = () => {
         </MENU__LI>
 
         <MENU__LI>
+          <Link href="/transaction"><a>
           <ADD_BUTTON>+</ADD_BUTTON>
+          </a></Link>
         </MENU__LI>
 
         <MENU__LI weight={router.asPath === "/profile" && "bold"}>
