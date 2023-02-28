@@ -5,7 +5,7 @@ export const CONTAINER_TOLTA_MONEY__section = Styled.section`
   background: white;
   position: relative;
   top: -50px;
-  z-index: 99;
+  z-index: 20;
   width: min-content;
   height: 290px;
   margin: 0 auto;

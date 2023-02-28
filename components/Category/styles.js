@@ -2,6 +2,11 @@ import Styled from 'styled-components';
 import GlobalStyle from '@styles/globalStyles';
 
 export const SECTION__CATEGORIES = Styled.section`
+
+    position: relative;
+    z-index: 30;
+    top: -20px;
+
     h2 {
         font-family: ${GlobalStyle.TYPOGRAPIC.roboto};
         font-weight: bold;
