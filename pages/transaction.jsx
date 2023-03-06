@@ -1,8 +1,16 @@
-import { MenuNav } from "../components/Menu/index";
+import { Header } from "@components/Header";
+import { MenuNav } from "@components/Menu/index";
+import { NewCategoryValue } from "@components/NewCategoryValue";
+import { useState } from "react";
 
-const Menu = () => {
+const Transaction = () => {
+  const [type, setType] = useState({type:'ingreso', badge: 'COP', value:0});
   return (
-    <MenuNav />
+    <>
+      <Header />
+      <MenuNav />
+      <NewCategoryValue type={type} setType={setType}/>
+    </>
   );
 }
-export default Menu;
+export default Transaction;
