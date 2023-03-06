@@ -8,7 +8,7 @@ import { Context } from '../../context';
 export const Categories = () => {
   
   const [Categories, setCategories] = useState();
-  const [filterTransactions, setFilterTransactions] = useContext(Context)
+  const { filterTransactions, setFilterTransactions, categoriesContext, setCategoriesContext } = useContext(Context)
   const [selectedCategory, SetSelectedCategory] = useState();
 
   useEffect(() => {
@@ -25,6 +25,7 @@ export const Categories = () => {
           const data = await response.json();
           // Dejo este console.log para ver lo que devuelve jaja además esto después sería bueno guardarlo en el contexto para usarlo en toda la aplicación 👍
           setCategories(data.result);
+          setCategoriesContext(data.result);
       }
       getCategories();
   }, []);

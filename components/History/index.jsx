@@ -9,7 +9,7 @@ import { Context } from '../../context';
 export const History = () => {
 
   const [History, setHistory] = useState();
-  const [filterTransactions, setFilterTransactions] = useContext(Context)
+  const { filterTransactions, setFilterTransactions } = useContext(Context)
 
   useEffect(() => {
 
