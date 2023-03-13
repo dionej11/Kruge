@@ -30,7 +30,7 @@ export const INPUT_DATA__div = Styled.div`
     justify-content: space-between;
 `
 export const VALUE__input = Styled.input`
-    width: 10rem;
+    width: 75%;
     height: 1.5rem;
     border: none;
     border-bottom: 1px solid #BBBBBB;

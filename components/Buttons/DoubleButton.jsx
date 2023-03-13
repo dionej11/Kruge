@@ -8,14 +8,14 @@ export const DoubleButton = ({type, setType}) => {
 
     return (
         <CONTAINER_BTN__div background={tapButton === "principal"?"#8585DD":"#FF8B8B"}>
-            <BasicButton onClick={() => {setTapButton("principal"); setType({...type, type: 'ingreso'})}} color={tapButton === "principal"?"principal":"#FF8B8B"}>Ingresos</BasicButton>
-            <BasicButton onClick={() => {setTapButton("secundario"); setType({...type, type: 'gasto'})}}  color={tapButton === "principal"?"#8585DD":"secundario"}>Gastos</BasicButton>
+            <BasicButton onClick={() => {setTapButton("principal"); setType({...type, type: 'ingreso'})}} color={tapButton === "principal"?"principal":"#FF8B8B"} width="100%">Ingresos</BasicButton>
+            <BasicButton onClick={() => {setTapButton("secundario"); setType({...type, type: 'gasto'})}}  color={tapButton === "principal"?"#8585DD":"secundario"} width="100%">Gastos</BasicButton>
         </CONTAINER_BTN__div>
     );
 }
 /**Styles**/
 const CONTAINER_BTN__div = styled.div`
-    width: 15rem;
+    width: 100%;
     height: 2.2rem;
     display: flex;
     justify-content: space-between;
