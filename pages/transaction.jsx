@@ -40,7 +40,7 @@ const Transaction = () => {
       <MenuNav />
       <NewCategoryValue type={type} setType={setType} />
       <InfoNewTransaction info={info} setInfo={setInfo} />
-      <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+      <div style={{ display: "flex", justifyContent: "center", width: "100%", marginBottom: "7rem" }}>
         <BasicButton
           onClick={sendNewTransaction}
           color={type.type === "ingreso" ? "principal" : "secundario"}
