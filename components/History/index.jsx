@@ -29,8 +29,6 @@ export const History = () => {
       getHistory();
   }, []);
 
-  console.log(filterTransactions);
-
   return (
     <SECTION__HISTORY>
       <h2>Últimos movimientos: </h2>

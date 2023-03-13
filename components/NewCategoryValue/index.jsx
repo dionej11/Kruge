@@ -66,7 +66,7 @@ export const NewCategoryValue = ({type, setType}) => {
                         :null
                     }
                 </div>
-                <VALUE__input typeTran= {type} type="number" onChange={(e) => setType({...type, value:e.target.value})} />
+                <VALUE__input typeTran= {type} type="number" onChange={(e) => setType({...type, value: parseInt(e.target.value)})} />
             </INPUT_DATA__div>
         </CONTAINER_VALUE__section>
     );
