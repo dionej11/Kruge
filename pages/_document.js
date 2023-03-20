@@ -10,6 +10,7 @@ export default function Document() {
         <title>Kruge</title>
       <body>
         <Main />
+        <div id="modal"></div>
         <NextScript />
       </body>
     </Html>

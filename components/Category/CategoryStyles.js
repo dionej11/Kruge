@@ -12,6 +12,7 @@ export const DIV__EDIT = Styled.div`
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 999;
     margin: 0px -10px 0px 0px;
     width: 25px;
     height: 25px;
@@ -37,5 +38,12 @@ export const DIV__CATEGORY = Styled.div`
     margin: 0px 8px;
     padding: 6px;
     border: ${props => props.stylesSelected ?
-    "5px solid"+GlobalStyle.COLORS.principal+"" : "0"}
+    "5px solid"+GlobalStyle.COLORS.principal+"" : "0"};
+
+    svg {
+        width: 22px;
+        height: 22px;
+        padding: 10px;
+        color: #C9C5C5;
+    }
 `

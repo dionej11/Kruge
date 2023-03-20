@@ -1,0 +1,20 @@
+export const IconsURL = [
+    "https://i.postimg.cc/d3GY3QJN/Compras.png",
+    "https://i.postimg.cc/K8G2cywQ/Estudio.png",
+    "https://i.postimg.cc/m2G4q9Sv/Hogar.png",
+    "https://i.postimg.cc/52sM6RMJ/Salud.png",
+    "https://i.postimg.cc/FK1XcV9L/Transporte.png",
+    "https://i.postimg.cc/HWMHBzb0/Veh-culo.png",
+    "https://i.postimg.cc/jdQTrjgL/Viajes.png",
+    "https://i.postimg.cc/zBjwrKgx/ahorros.png",
+    "https://i.postimg.cc/ZRZP2VC9/deporte.png",
+    "https://i.postimg.cc/VvkqLv9m/deuda.png",
+    "https://i.postimg.cc/J7p3Y3mn/entrenimiento.png",
+    "https://i.postimg.cc/sD8YsVMC/gastos.png",
+    "https://i.postimg.cc/pXyfw9XB/gimnasio.png",
+    "https://i.postimg.cc/kGYxVCw8/musica.png",
+    "https://i.postimg.cc/7LrSJm1B/pasatiempos.png",
+    "https://i.postimg.cc/VkCjN3tr/telefono.png",
+    "https://i.postimg.cc/1z0wGwJy/vestuario.png",
+    "https://i.postimg.cc/j5sNZ2FP/videojuegos.png"
+]

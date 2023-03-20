@@ -1,6 +1,9 @@
 import '@styles/defaultStyles.css';
 import { useState } from 'react';
 import { Context } from '../context';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#modal');
 
 export default function MyApp({ Component, pageProps }) 
 { 
@@ -11,7 +14,7 @@ export default function MyApp({ Component, pageProps })
   return (
     <Context.Provider value={{
         filterTransactions, setFilterTransactions,
-        categoriesContext, setCategoriesContext
+        categoriesContext, setCategoriesContext, Modal
       }}>
       <Component {...pageProps} />
     </Context.Provider>
