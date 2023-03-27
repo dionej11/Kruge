@@ -1,13 +1,13 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { DIV__INFO_TRASACTION, INPUT__INFO_CATEGORY, INPUT__INFO_DETAILS, SELECT__INFO_TRANSACTION, DIV__CATEGORY, DIV__DATE } from './styles';
 import { Context } from '../../context';
 
 export const InfoNewTransaction = ({ info, setInfo }) => {
 
+    useEffect
+
     const { categoriesContext, setCategoriesContext } = useContext(Context);
     const [ selectedCategory, setSelectedCategory ] = useState(); 
-
-    console.log("categoriesContext ", categoriesContext);
 
     const IconSelected = (e) => {
         let value = e.target.value;

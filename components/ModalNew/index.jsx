@@ -2,12 +2,13 @@ import Image from 'next/image'
 import { useContext } from 'react';
 import { Context } from '../../context'
 import { FaPlus } from 'react-icons/fa';
+import { Toaster, toast } from 'react-hot-toast';
 import { PostCategory } from '../../libs/FetchData';
 import { BasicButton } from '@components/Buttons/BasicButton';
 import { TiArrowSortedDown, TiArrowSortedUp } from 'react-icons/ti'
 import { DIV__EDIT_MODAL, INPUT__EDIT_CATEGORY, INPUT__ICONS_LIST } from '@components/Category/styles';
 
-export const NewCategory = ({ modalCreateIsOpen, customStyles, itemNewCategory, setItemNewCategory, option, setOption, IconsURL, setItemNewCategoryIcon, itemNewCategoryIcon, closeModal, setCategories }) => {
+export const NewCategory = ({ modalCreateIsOpen, customStyles, itemNewCategory, setItemNewCategory, option, setOption, IconsURL, setItemNewCategoryIcon, itemNewCategoryIcon, closeModal, setCategories, setCategoriesContext }) => {
 
     const { Modal } = useContext(Context)
     
@@ -20,6 +21,8 @@ export const NewCategory = ({ modalCreateIsOpen, customStyles, itemNewCategory, 
   
         const data = await PostCategory(newCategory);
         setCategories(data.result);
+        setCategoriesContext(data.result);
+        toast.success('Categoría creada con éxito');
         closeModal();
       }
 
@@ -58,6 +61,7 @@ export const NewCategory = ({ modalCreateIsOpen, customStyles, itemNewCategory, 
                 <BasicButton onClick={createCategory} color="principal">Guardar</BasicButton>
                 <BasicButton onClick={closeModal} color="secundario">Cancelar</BasicButton>
                 </div>
+                <Toaster position="bottom-center" reverseOrder={false} />
             </DIV__EDIT_MODAL>}}
             id="modalEdit"
             />

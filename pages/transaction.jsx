@@ -5,8 +5,13 @@ import { InfoNewTransaction } from "@components/InfoNewTransaction";
 import { BasicButton } from "@components/Buttons/BasicButton";
 import { useState } from "react";
 import Cookie from 'js-cookie';
+import { Toaster, toast } from 'react-hot-toast';
+import { useRouter } from 'next/router'
 
 const Transaction = () => {
+
+  const router = useRouter();
+
   const [type, setType] = useState({ type: "ingreso", badge: "COP", value: 0 });
   const [info, setInfo] = useState({
     category: null,
@@ -29,7 +34,10 @@ const Transaction = () => {
       },
       body: JSON.stringify(newTrans)
     });
-    const data = await response.json();
+    toast.success('Transacción agregada con éxito');
+    setTimeout(() => {
+      router.push('/home')
+    }, 3000)
   };
 
   // FALTA LIMPIAR EL FORMULARIO + ALERTA DE SUCCESS
@@ -50,6 +58,7 @@ const Transaction = () => {
           Guardar
         </BasicButton>
       </div>
+      <Toaster position="bottom-center" reverseOrder={false} />
     </>
   );
 };

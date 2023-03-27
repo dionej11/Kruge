@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import { useContext } from 'react';
 import { Context } from '../../context';
+import { Toaster, toast } from 'react-hot-toast';
 import { BasicButton } from '@components/Buttons/BasicButton';
 import { PutCategory, DeleteCategory } from '../../libs/FetchData';
 import { TiArrowSortedDown, TiArrowSortedUp } from 'react-icons/ti';
 import { DIV__EDIT_MODAL, INPUT__EDIT_CATEGORY, INPUT__ICONS_LIST } from '@components/Category/styles';
 
-export const PutCategories = ({ modalEditIsOpen, customStyles, setItemNewCategory, itemNewCategory, itemNewCategoryIcon, option, setOption, IconsURL, setItemNewCategoryIcon, closeModal, itemSelectedState, setCategories }) => {
+export const PutCategories = ({ modalEditIsOpen, customStyles, setItemNewCategory, itemNewCategory, itemNewCategoryIcon, option, setOption, IconsURL, setItemNewCategoryIcon, closeModal, itemSelectedState, setCategories, setCategoriesContext }) => {
 
     const { Modal } = useContext(Context)
     
@@ -19,13 +20,21 @@ export const PutCategories = ({ modalEditIsOpen, customStyles, setItemNewCategor
   
         const data = await PutCategory(newCategory, selected._id);
         setCategories(data.result);
-        closeModal();
-      }
-
+        setCategoriesContext(data.result);
+        toast.success('Categoría actualizada con éxito');
+        setTimeout(() => {
+            closeModal();
+        }, 3000)
+    }
+    
     async function deleteCategory(selected) {
         const data = await DeleteCategory(selected._id);
         setCategories(data.result);
-        closeModal();
+        setCategoriesContext(data.result);
+        toast.success('Categoría eliminada con éxito');
+        setTimeout(() => {
+            closeModal();
+        }, 3000)
     }
 
     return (
@@ -61,6 +70,7 @@ export const PutCategories = ({ modalEditIsOpen, customStyles, setItemNewCategor
                 </div>
                 <p>⚠️ Eliminar categoría (recuerda que esto eliminará las transacciones de dicha categoría) ⚠️</p>
                 <BasicButton width={200} onClick={() => deleteCategory(itemSelectedState)} color="secundario">Eliminar categoría</BasicButton>
+                <Toaster position="bottom-center" reverseOrder={false} />
             </DIV__EDIT_MODAL>}}
             id="modalEdit"
             />
