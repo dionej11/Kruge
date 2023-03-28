@@ -129,9 +129,9 @@ export const Categories = () => {
         } 
       </UL__CATEGORIES>
       {/** MODAL PARA ACTUALIZAR */}
-      <PutCategories {...{ modalEditIsOpen, customStyles, setItemNewCategory, itemNewCategory, itemNewCategoryIcon, option, setOption, IconsURL, setItemNewCategoryIcon, closeModal: () => { closeModal(setIsOpenEdit) }, itemSelectedState, setCategories}} />
+      <PutCategories {...{ modalEditIsOpen, customStyles, setItemNewCategory, itemNewCategory, itemNewCategoryIcon, option, setOption, IconsURL, setItemNewCategoryIcon, closeModal: () => { closeModal(setIsOpenEdit) }, itemSelectedState, setCategories, setCategoriesContext}} />
       {/** MODAL PARA CREAR */}
-      <NewCategory {...{modalCreateIsOpen, customStyles, itemNewCategory, setItemNewCategory, option, setOption, IconsURL, setItemNewCategoryIcon, itemNewCategoryIcon, closeModal: () => { closeModal(setIsOpenCreate) }, setCategories}} />
+      <NewCategory {...{modalCreateIsOpen, customStyles, itemNewCategory, setItemNewCategory, option, setOption, IconsURL, setItemNewCategoryIcon, itemNewCategoryIcon, closeModal: () => { closeModal(setIsOpenCreate) }, setCategories, setCategoriesContext}} />
     </SECTION__CATEGORIES>
   );
 }

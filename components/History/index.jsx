@@ -9,7 +9,7 @@ import { Context } from '../../context';
 export const History = () => {
 
   const [History, setHistory] = useState();
-  const { filterTransactions, setFilterTransactions } = useContext(Context)
+  const { filterTransactions, setFilterTransactions, categoriesContext } = useContext(Context)
 
   useEffect(() => {
 
@@ -27,7 +27,7 @@ export const History = () => {
           setHistory(data.result);
       }
       getHistory();
-  }, []);
+  }, [categoriesContext]);
 
   return (
     <SECTION__HISTORY>
