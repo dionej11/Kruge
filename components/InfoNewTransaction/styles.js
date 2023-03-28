@@ -12,7 +12,8 @@ export const DIV__INFO_TRASACTION = Styled.div`
     margin: 18px auto;
     padding: 10px;
 
-    p {
+    h5 {
+        font-size: 16px;
         text-align: left;
         width: 100%;
         font-weight: 500;
@@ -48,7 +49,17 @@ export const SELECT__INFO_TRANSACTION = Styled.select`
     padding: 10px;
     border: 0;
 `
-
+export const NAME_TRANSACTION = Styled.p`
+    width: 100%;
+    box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #FFF;
+    margin: 18px auto;
+    padding: 10px;
+    border: 0;
+    font-weight: 400;
+    box-sizing: border-box;
+`
 export const DIV__CATEGORY = Styled.div`
     display: flex;
     align-items: center;

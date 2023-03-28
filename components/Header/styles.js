@@ -7,6 +7,7 @@ export const HEADER = Styled.header`
    height: 172px;
    position: relative;
    overflow: hidden;
+   z-index: -200;
 `
 
 export const DIV__THREE = Styled.div`

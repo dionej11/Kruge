@@ -41,18 +41,20 @@ export const History = () => {
                 title={item.details}
                 value={item.value}
                 type={item.type}
+                data={item}
               />
             ))
           : filterTransactions?.length === 0 ?
               <h2>Esta categoría no tiene transacciones 😜</h2>
           : History &&
           History.map((item, index) => (
-            <Transaction 
+            <Transaction
               key={`history-transaction-${index}`}
               icon={item.categoryObject[0].icon}
               title={item.details}
               value={item.value}
               type={item.type}
+              idTrans={item._id}
             />
           ))
         }

@@ -40,7 +40,7 @@ export const VALUE__input = Styled.input`
     font-size: 1rem;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
-    color: ${props => props.typeTran.type === 'ingreso'? '#5C5CD1': "#FF6565"};
+    color: ${props => props.typeTran === 'ingreso'? '#5C5CD1': "#FF6565"};
 
 `
 export const SELECTED__div = Styled.div`

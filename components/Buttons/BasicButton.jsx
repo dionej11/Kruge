@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import GlobalStyle from '@styles/globalStyles';
 
 export const BasicButton = ({color, children, width, height, onClick}) => {
+    console.log(color)
     return (
         <BASIC_BTN_STYLE__button 
             color={color}
@@ -25,5 +26,6 @@ const BASIC_BTN_STYLE__button = styled.button`
     text-align: center;
     color: #ffffff;
     font-size: 0.875rem;
+    text-transform: capitalize;
     cursor: pointer;
 `

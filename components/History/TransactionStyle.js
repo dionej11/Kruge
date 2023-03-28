@@ -11,6 +11,7 @@ export const DIV__TRASACTION = Styled.div`
     display: grid;
     grid-template-columns: 18% 62% 20%;
     align-items: center;
+    cursor: pointer;
 
     h3 {
         font-family: ${GlobalStyle.TYPOGRAPIC.roboto};
