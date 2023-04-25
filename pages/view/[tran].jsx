@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { InfoNewTransaction } from '@components/InfoNewTransaction';
 import { FaTrash, FaShareAlt, FaPen } from "react-icons/fa";
 import Styled from 'styled-components';
-import GlobalStyle from '@styles/globalStyles';
+import { Toaster, toast } from 'react-hot-toast';
 
 const ViewTrans = () => {
     const router = useRouter();
@@ -28,6 +28,61 @@ const ViewTrans = () => {
         }
         getTransData();
     }, []);
+
+    const deleteTrans = async () => {
+        const response = await fetch(`http://localhost:3000/transactions/${tran}`, {
+            method: 'DELETE',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + Cookie.get('JWT'),
+            }
+        });
+        const data = await response.json();
+
+        data.message = "TRANSACTION DELETED" ? 
+        toast.success('Hiper eliminada!', {"style": {
+            borderRadius: '10px',
+            background: '#292929',
+            color: '#FFF',
+        }})
+        :toast.error("Mmm algo salió mal :(", {"style": {
+            borderRadius: '10px',
+            background: '#292929',
+            color: '#FFF',
+        }})
+        setTimeout(() => {
+            router.push('/home')
+          }, 2000)
+    }
+
+    const deleteTransToast = ()=> {
+        toast((t) => (
+            <div style={{display: "flex", flexDirection: "column"}}>
+                <span>
+                ¿De verdad quieres eliminar esta transacción?
+                </span>
+                <div style={{display: "flex", justifyContent: "space-evenly", marginTop: "5px"}}>
+                    <button style={{width: "6rem", height: "2rem", borderRadius: "7px", border: "none", backgroundColor: "#FF6565", cursor: 'pointer', color: "#FFF"}}
+                        onClick={deleteTrans}>
+                        Sip
+                    </button>
+                    <button style={{width: "6rem", height: "2rem", borderRadius: "7px", border: "none", backgroundColor: "#6d6d6d", cursor: 'pointer', color: "#FFF"}} 
+                        onClick={() => toast.dismiss(t.id)}>
+                        Nop
+                    </button>
+                </div>
+            </div>
+
+        ),{ 
+            "style": {
+                borderRadius: '10px',
+                background: '#292929',
+                color: '#FFF',
+            }
+        });
+    }
+
     return (
         <>
         <Header />
@@ -47,11 +102,12 @@ const ViewTrans = () => {
                 <FaShareAlt />
                 <span>Compartir</span>
             </div>
-            <div>
+            <div onClick={deleteTransToast}>
                 <FaTrash />
                 <span>Eliminar</span>
             </div>
         </Actions>
+        <Toaster position="bottom-center" reverseOrder={false} />
         <MenuNav />
         </>
     )
@@ -73,6 +129,7 @@ const Actions = Styled.section`
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        cursor: pointer;
     }
     div:first-child {
         color: #5F5FC4;

@@ -10,6 +10,7 @@ import {
     CONTAINER_VALUE__section,
     INPUT_DATA__div,
     VALUE__input,
+    VALUE_VIEW__div,
     SELECTED__div,
     OPTIONS__div,
     ARROW
@@ -46,9 +47,9 @@ export const NewCategoryValue = ({modeTran, type, setType, fixedValue, fixedBadg
                             </SELECTED__div>
                         </div>
                         {/* <VALUE__input typeTran= {fixedType} type="number" value={parseInt(fixedValue+"")}/> */}
-                        <VALUE__input typeTran= {fixedType}>
+                        <VALUE_VIEW__div typeTran= {fixedType}>
                             <p>{fixedValue}</p>
-                        </VALUE__input>
+                        </VALUE_VIEW__div>
                     </INPUT_DATA__div>
                     </>
                 : <>
