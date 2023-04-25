@@ -25,7 +25,7 @@ export const INPUT__INFO_CATEGORY = Styled.input`
     box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     background-color: #FFF;
-    margin: 18px auto;
+    margin: 10px auto;
     padding: 10px;
     border: 0;
 `

@@ -29,18 +29,20 @@ export const INPUT_DATA__div = Styled.div`
     align-items: flex-start;
     justify-content: space-between;
 `
-export const VALUE__input = Styled.input`
+export const VALUE__input = Styled.div`
     width: 75%;
     height: 1.5rem;
     border: none;
     border-bottom: 1px solid #BBBBBB;
     background: none;
     outline: none;
-    text-align: end;
     font-size: 1rem;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
     color: ${props => props.typeTran === 'ingreso'? '#5C5CD1': "#FF6565"};
+    p {
+        text-align: end;
+    }
 
 `
 export const SELECTED__div = Styled.div`

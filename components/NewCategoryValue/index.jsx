@@ -45,7 +45,10 @@ export const NewCategoryValue = ({modeTran, type, setType, fixedValue, fixedBadg
                                 </button>
                             </SELECTED__div>
                         </div>
-                        <VALUE__input typeTran= {fixedType} type="number" value={parseInt(fixedValue+"")}/>
+                        {/* <VALUE__input typeTran= {fixedType} type="number" value={parseInt(fixedValue+"")}/> */}
+                        <VALUE__input typeTran= {fixedType}>
+                            <p>{fixedValue}</p>
+                        </VALUE__input>
                     </INPUT_DATA__div>
                     </>
                 : <>

@@ -1,13 +1,8 @@
 import { useContext, useState } from 'react';
 import { DIV__INFO_TRASACTION, INPUT__INFO_CATEGORY, INPUT__INFO_DETAILS, SELECT__INFO_TRANSACTION, DIV__CATEGORY, DIV__DATE, NAME_TRANSACTION } from './styles';
-import { useContext, useEffect, useState } from 'react';
-import { DIV__INFO_TRASACTION, INPUT__INFO_CATEGORY, INPUT__INFO_DETAILS, SELECT__INFO_TRANSACTION, DIV__CATEGORY, DIV__DATE } from './styles';
 import { Context } from '../../context';
 
 export const InfoNewTransaction = ({modeTran, info, setInfo, fixedDetailes, fixedCategory, fixedDate }) => {
-
-    useEffect
-
     const { categoriesContext, setCategoriesContext } = useContext(Context);
     const [ selectedCategory, setSelectedCategory ] = useState(); 
     
